@@ -2,4 +2,4 @@
 - hosts: all
   connection: local
   roles:
-    - role: notjustanyjoe.git
+    - role: ../ansible-role-git
