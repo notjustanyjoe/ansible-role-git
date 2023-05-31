@@ -5,7 +5,7 @@
     - name: Set Role Path Link for ansible-pull
       file:
         src: '{{ playbook_dir }}'
-        dest: '{{ playbook_dir }}/roles/ansible-role-puppet'
+        dest: '{{ playbook_dir }}/roles/ansible-role-git'
         state: link
       register: role_path
     - name: Use Git role
