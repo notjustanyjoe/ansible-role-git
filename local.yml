@@ -2,6 +2,13 @@
 - hosts: localhost
   connection: local
   tasks:
-    - name: Install Git
+    - name: Set Role Path Link for ansible-pull
+      file:
+        src: '{{ playbook_dir }}'
+        dest: '{{ playbook_dir }}/roles/ansible-role-puppet'
+        state: link
+      register: role_path
+    - name: Use Git role
       include_role:
-        name: ../ansible-role-git
+        name: ansible-role-git
+      when: role_path|length > 0
