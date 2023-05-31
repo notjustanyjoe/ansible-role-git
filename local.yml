@@ -4,4 +4,4 @@
   tasks:
     - name: Install Git
       include_role:
-        name: ansible-role-git
+        name: ../ansible-role-git
