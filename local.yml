@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  connection: local
+  tasks:
+    - name: Install Git
+      include_role:
+        name: ansible-role-git
